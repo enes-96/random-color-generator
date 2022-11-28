@@ -1,5 +1,4 @@
 "use strict";
-const container = document.querySelector(".container");
 const display = document.querySelector("h1");
 const btn = document.querySelector(".color-generator");
 const btnCopy = document.querySelector(".copy");
@@ -9,5 +8,8 @@ function colorGenerator() {
 
 btn.addEventListener("click", () => {
   display.innerText = colorGenerator();
-  container.style.backgroundColor = display.innerText;
+  document.body.style.backgroundColor = display.innerText;
+  display.style.color = colorGenerator();
+  btn.style.outlineColor = colorGenerator();
+  btn.style.backgroundColor = colorGenerator();
 });
